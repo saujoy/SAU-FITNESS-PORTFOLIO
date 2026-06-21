@@ -1,0 +1,19 @@
+/* Custom Global Styles for Fitness Theme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+    transition: color 0.3s ease;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470') no-repeat center center/cover;
+}
