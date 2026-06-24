@@ -1,19 +1,99 @@
-/* Custom Global Styles for Fitness Theme */
+/* ==========================================================================
+   1. GLOBAL RESET & ORIGINAL DARK MODE BASE
+   ========================================================================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 .navbar-brand {
     letter-spacing: 2px;
 }
 
-.nav-link:hover {
-    color: #ffc107 !important;
+/* Original hero background imagery with dark overlay masks */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
+                url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470') 
+                no-repeat center center/cover;
+}
+
+/* ==========================================================================
+   2. CUSTOM VIBRANT PINK CORE SYSTEM (FOR COACH SAU)
+   ========================================================================== */
+:root {
+    --brand-pink: #ff2a75;       /* Vibrant neon/hot pink */
+    --brand-pink-hover: #e01b5d; /* Slightly deeper pink for focus/hover states */
+    --brand-dark: #111111;
+}
+
+/* Text & Background Utility Colors */
+.text-pink {
+    color: var(--brand-pink) !important;
+}
+
+.bg-pink {
+    background-color: var(--brand-pink) !important;
+}
+
+/* ==========================================================================
+   3. BRAND NAVIGATION & DYNAMIC COMPONENT ACTIONS
+   ========================================================================== */
+/* Smooth active/hover navbar item transitions matching your brand colors */
+.navbar-dark .navbar-nav .nav-link {
     transition: color 0.3s ease;
 }
 
-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470') no-repeat center center/cover;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--brand-pink) !important;
+}
+
+/* Vibrant Primary Pink Action Buttons */
+.btn-pink {
+    background-color: var(--brand-pink);
+    color: #ffffff !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-pink:hover {
+    background-color: var(--brand-pink-hover);
+    box-shadow: 0 4px 15px rgba(255, 42, 117, 0.5);
+}
+
+/* Vibrant Outline Action Buttons */
+.btn-outline-pink {
+    border: 2px solid var(--brand-pink);
+    color: var(--brand-pink) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-pink:hover {
+    background-color: var(--brand-pink);
+    color: #ffffff !important;
+}
+
+/* Form input styling tweaks */
+.form-control:focus, .form-select:focus {
+    border-color: var(--brand-pink);
+    box-shadow: 0 0 0 0.25px rgba(255, 42, 117, 0.25);
+}
+
+/* Custom interactive framing rules for the image grids */
+.gallery-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(255, 42, 117, 0.3) !important;
 }
