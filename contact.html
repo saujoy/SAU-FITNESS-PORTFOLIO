@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SAU FITNESS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-dark text-white d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-pink" href="index.html">SAU FITNESS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transformations.html">Success Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Book Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1">
+        
+        <header class="container my-5 text-center">
+            <span class="badge bg-pink text-white mb-2 px-3 py-2 text-uppercase fw-bold">Get In Touch</span>
+            <h1 class="display-4 fw-bold text-uppercase">Contact <span class="text-pink">Us</span></h1>
+            <p class="lead text-secondary max-width-600 mx-auto">
+                We'd love to hear from you! Whether you have questions about memberships, fitness programs, personal training, or would like to schedule a visit, our team is ready to assist you.
+            </p>
+        </header>
+
+        <section class="container my-5">
+            <div class="row g-5">
+                
+                <div class="col-lg-5">
+                    <div class="bg-black border border-secondary rounded p-4 h-100 shadow">
+                        <h2 class="h3 fw-bold text-pink mb-4">Contact Details</h2>
+                        
+                        <div class="mb-4">
+                            <p class="mb-2 text-white fw-semibold">📞 Phone:</p>
+                            <p class="text-secondary ps-3">0729 757 854</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="mb-2 text-white fw-semibold">📧 Email:</p>
+                            <p class="text-secondary ps-3"><a href="mailto:janicesau@gmail.com" class="text-pink text-decoration-none">janicesau@gmail.com</a></p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="mb-2 text-white fw-semibold">📍 Location:</p>
+                            <p class="text-secondary ps-3">Kamulu, Nairobi, Kenya</p>
+                        </div>
+
+                        <hr class="border-secondary my-4">
+
+                        <h2 class="h4 fw-bold text-pink mb-3">Operating Hours</h2>
+                        <div class="mb-2">
+                            <span class="fw-semibold">🕒 Monday – Friday:</span>
+                            <span class="text-secondary d-block ps-3">4:00 AM – 12:00 AM</span>
+                        </div>
+                        <div>
+                            <span class="fw-semibold">🕒 Saturday – Sunday:</span>
+                            <span class="text-secondary d-block ps-3">6:00 AM – 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="p-4 border border-secondary rounded h-100 shadow-sm bg-dark">
+                        <h2 class="h3 fw-bold mb-2">Send Us a <span class="text-pink">Message</span></h2>
+                        <p class="text-secondary small mb-4">Have a question or need more information? Fill out our contact form and we'll get back to you as soon as possible.</p>
+                        
+                        <div id="formAlertBox" class="mb-3"></div>
+
+                        <form id="gymContactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label small fw-semibold">Full Name</label>
+                                <input type="text" class="form-control bg-black text-white border-secondary" id="fullName" placeholder="Enter your full name">
+                                <div class="invalid-feedback text-pink">Please provide your full name.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="emailAddress" class="form-label small fw-semibold">Email Address</label>
+                                <input type="email" class="form-control bg-black text-white border-secondary" id="emailAddress" placeholder="name@example.com">
+                                <div class="invalid-feedback text-pink">Please provide a valid email address.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phoneNumber" class="form-label small fw-semibold">Phone Number</label>
+                                <input type="tel" class="form-control bg-black text-white border-secondary" id="phoneNumber" placeholder="e.g. 0729 757 854">
+                                <div class="invalid-feedback text-pink">Please provide a phone number.</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="formMessage" class="form-label small fw-semibold">Message</label>
+                                <textarea class="form-control bg-black text-white border-secondary" id="formMessage" rows="4" placeholder="How can we help you?"></textarea>
+                                <div class="invalid-feedback text-pink">Please type your message context.</div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-pink btn-lg fw-bold">Submit Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-black py-5 border-top border-secondary text-center">
+            <div class="container my-3 max-width-800 mx-auto">
+                <h2 class="fw-bold text-uppercase mb-3">Visit <span class="text-pink">Us</span></h2>
+                <p class="text-secondary lead mb-4">
+                    Our women-only fitness center provides a welcoming, supportive, and safe environment for women of all ages and life stages. Whether you're a student, professional, mother, expectant mother, or senior, we're here to help you achieve your fitness and wellness goals.
+                </p>
+                <h3 class="h4 text-pink fw-bold mt-4">Let's Connect</h3>
+                <p class="text-white font-monospace">
+                    We look forward to helping you begin or continue your wellness journey. Reach out today and become part of a community that empowers women to grow stronger, healthier, and more confident every day. 💜✨
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-secondary text-center py-4 border-top border-secondary">
+        <div class="container">
+            <p class="mb-1 text-white">&copy; 2026 SAU FITNESS. All Rights Reserved.</p>
+            <p class="small">Strength, Mobility & Personal Fitness Coaching</p>
+            <div class="mt-3">
+                <a href="index.html" class="text-pink mx-2 text-decoration-none">Home</a>
+                <a href="about.html" class="text-pink mx-2 text-decoration-none">About</a>
+                <a href="programs.html" class="text-pink mx-2 text-decoration-none">Programs</a>
+                <a href="transformations.html" class="text-pink mx-2 text-decoration-none">Success Stories</a>
+                <a href="gallery.html" class="text-pink mx-2 text-decoration-none">Gallery</a>
+                <a href="faq.html" class="text-pink mx-2 text-decoration-none">FAQs</a>
+                <a href="contact.html" class="text-pink mx-2 text-decoration-none">Book Consultation</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('gymContactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop form reload
+            
+            let isValid = true;
+            const name = document.getElementById('fullName');
+            const email = document.getElementById('emailAddress');
+            const phone = document.getElementById('phoneNumber');
+            const msg = document.getElementById('formMessage');
+            const alertBox = document.getElementById('formAlertBox');
+
+            // Reset Styles
+            [name, email, phone, msg].forEach(el => el.classList.remove('is-invalid'));
+            alertBox.innerHTML = '';
+
+            // Name validation
+            if(!name.value.trim()){
+                name.classList.add('is-invalid');
+                isValid = false;
+            }
+
+            // Email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email.value.trim())){
+                email.classList.add('is-invalid');
+                isValid = false;
+            }
+
+            // Phone validation
+            if(!phone.value.trim()){
+                phone.classList.add('is-invalid');
+                isValid = false;
+            }
+
+            // Message validation
+            if(!msg.value.trim()){
+                msg.classList.add('is-invalid');
+                isValid = false;
+            }
+
+            // Action handling block
+            if(isValid) {
+                alertBox.innerHTML = `
+                    <div class="alert alert-success bg-pink border-0 text-white text-center shadow-sm" role="alert">
+                        <strong>Success!</strong> Thank you, ${name.value.trim()}. Your message has been sent. We look forward to helping you grow stronger! 💜
+                    </div>
+                `;
+                document.getElementById('gymContactForm').reset();
+            }
+        });
+    </
