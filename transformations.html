@@ -7,9 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-dark text-white">
+<body class="bg-dark text-white d-flex flex-column min-vh-100">
 
-    <!-- RESPONSIVE NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-pink" href="index.html">SAU FITNESS</a>
@@ -19,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto fw-semibold">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Coach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
                     <li class="nav-item"><a class="nav-link active" href="transformations.html">Success Stories</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -30,33 +29,117 @@
         </div>
     </nav>
 
-    <!-- HEADER -->
-    <header class="bg-dark text-white text-center py-5 border-bottom border-secondary">
+    <header class="bg-black text-center py-5 border-bottom border-secondary">
         <div class="container">
-            <h1 class="display-4 fw-bold text-uppercase">Real <span class="text-pink">Results</span></h1>
-            <p class="lead text-secondary max-width-600 mx-auto">See how real women in our community have unlocked lasting consistency and real strength.</p>
+            <span class="badge bg-pink text-white mb-2 px-3 py-2 text-uppercase fw-bold">Real Women. Real Progress. Real Confidence.</span>
+            <h1 class="display-4 fw-bold text-uppercase">Transformations</h1>
+            <p class="lead text-secondary max-width-800 mx-auto">
+                At SAU FITNESS, transformation is about more than physical appearance—it's about confidence, strength, health, and self-belief. Every woman who walks through our doors has a unique journey, and we are proud to support her every step of the way.
+            </p>
         </div>
     </header>
 
-    <!-- REVIEWS GRID -->
-    <main class="container my-5">
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="p-4 bg-black rounded border border-secondary shadow-sm">
-                    <p class="fst-italic text-secondary">"Training on the Mums Get Fit track completely rebuilt my core strength postpartum. Coach Sau understands real, functional motherhood pacing!"</p>
-                    <h3 class="h6 fw-bold text-pink text-uppercase m-0">- Sarah M. (Active Mum)</h3>
+    <main class="container my-5 flex-grow-1">
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-black text-white border-secondary h-100 p-2 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-pink small fw-bold text-uppercase tracking-wider mb-2">Teenager's Confidence Journey</span>
+                        <h3 class="card-title h4 fw-bold mb-3">Aisha's Story</h3>
+                        <p class="card-text text-secondary small mb-4">
+                            When Aisha joined our gym at 16, she struggled with self-confidence and felt intimidated by fitness. Through consistent training, encouragement, and a supportive community, she developed healthy habits, improved her fitness, and gained confidence that extends far beyond the gym.
+                        </p>
+                        <div class="mt-auto bg-dark p-3 rounded border-start border-3 border-pink">
+                            <span class="d-block small text-white fw-bold mb-1">The Transformation:</span>
+                            <span class="small text-secondary">Stronger body, greater confidence, healthier lifestyle.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="p-4 bg-black rounded border border-secondary shadow-sm">
-                    <p class="fst-italic text-secondary">"The Evergreen track completely eliminated my daily hip and back stiffness. I feel stronger and more agile at 62 than I did a decade ago!"</p>
-                    <h3 class="h6 fw-bold text-pink text-uppercase m-0">- Elena R. (Evergreen Member)</h3>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-black text-white border-secondary h-100 p-2 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-pink small fw-bold text-uppercase tracking-wider mb-2">From Pregnancy to Strength</span>
+                        <h3 class="card-title h4 fw-bold mb-3">Wanjiku's Story</h3>
+                        <p class="card-text text-secondary small mb-4">
+                            During her pregnancy, Wanjiku wanted to stay active safely while preparing for motherhood. Our trainers guided her through pregnancy-friendly workouts designed to support her changing body. Today, she is a healthy mother who continues to prioritize fitness and wellness.
+                        </p>
+                        <div class="mt-auto bg-dark p-3 rounded border-start border-3 border-pink">
+                            <span class="d-block small text-white fw-bold mb-1">The Transformation:</span>
+                            <span class="small text-secondary">Safe pregnancy fitness, improved endurance, smoother recovery after childbirth.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-black text-white border-secondary h-100 p-2 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-pink small fw-bold text-uppercase tracking-wider mb-2">Reclaiming Fitness After Motherhood</span>
+                        <h3 class="card-title h4 fw-bold mb-3">Amina's Story</h3>
+                        <p class="card-text text-secondary small mb-4">
+                            After welcoming her first child, Amina found it challenging to balance motherhood and self-care. Through our postnatal fitness program, she gradually rebuilt her strength, improved her energy levels, and regained confidence in her body.
+                        </p>
+                        <div class="mt-auto bg-dark p-3 rounded border-start border-3 border-pink">
+                            <span class="d-block small text-white fw-bold mb-1">The Transformation:</span>
+                            <span class="small text-secondary">Increased strength, renewed confidence, healthier work-life-family balance.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="card bg-black text-white border-secondary h-100 p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-pink small fw-bold text-uppercase tracking-wider mb-2">The Busy Professional's Success Story</span>
+                        <h3 class="card-title h4 fw-bold mb-3">Mwende's Story</h3>
+                        <p class="card-text text-secondary small mb-4">
+                            As a full-time professional, Mwende struggled to find time for exercise. By following a personalized fitness plan and attending classes that fit her schedule, she was able to stay consistent and prioritize her health.
+                        </p>
+                        <div class="mt-auto bg-dark p-3 rounded border-start border-3 border-pink">
+                            <span class="d-block small text-white fw-bold mb-1">The Transformation:</span>
+                            <span class="small text-secondary">Better fitness, reduced stress, increased energy and productivity.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="card bg-black text-white border-secondary h-100 p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-pink small fw-bold text-uppercase tracking-wider mb-2">Strong at Every Age</span>
+                        <h3 class="card-title h4 fw-bold mb-3">Nyambura's Story</h3>
+                        <p class="card-text text-secondary small mb-4">
+                            At 62, Nyambura wanted to stay active and maintain her independence. Through strength training, mobility exercises, and wellness classes, she improved her balance, flexibility, and overall health.
+                        </p>
+                        <div class="mt-auto bg-dark p-3 rounded border-start border-3 border-pink">
+                            <span class="d-block small text-white fw-bold mb-1">The Transformation:</span>
+                            <span class="small text-secondary">Greater mobility, improved strength, active and healthy aging.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5 py-5 border-top border-secondary bg-black rounded p-4">
+            <h2 class="fw-bold text-uppercase h3 mb-3">Your Story Could Be <span class="text-pink">Next</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-secondary small mb-4">
+                        Whether you're a teenager, a student, a working woman, an expectant mother, a new mum, or enjoying your golden years, we are here to help you achieve your goals. Every woman starts somewhere. Every journey matters. Every transformation is worth celebrating.
+                    </p>
+                    <p class="text-pink fw-bold font-monospace text-uppercase mb-4">
+                        Stronger Women. Stronger Together.
+                    </p>
+                    <a href="contact.html" class="btn btn-pink btn-lg px-5 fw-bold">Start Your Journey Today</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- GLOBAL FOOTER -->
     <footer class="bg-dark text-secondary text-center py-4 border-top border-secondary mt-auto">
         <div class="container">
             <p class="mb-1 text-white">&copy; 2026 SAU FITNESS. All Rights Reserved.</p>
