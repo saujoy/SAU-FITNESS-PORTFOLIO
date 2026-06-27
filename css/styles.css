@@ -20,11 +20,12 @@ header {
 }
 
 /* ==========================================================================
-   2. CUSTOM VIBRANT PINK CORE SYSTEM (FOR COACH SAU)
+   /* ==========================================================================
+   2. CUSTOM BRIGHT PINK CORE SYSTEM (FOR COACH SAU)
    ========================================================================== */
 :root {
-    --brand-pink: #ff2a75;       /* Vibrant neon/hot pink */
-    --brand-pink-hover: #e01b5d; /* Slightly deeper pink for focus/hover states */
+    --brand-pink: #ff007f;       /* Ultra-bright, high-saturation pink */
+    --brand-pink-hover: #e60072; /* Slightly darker shade for interactive hover/focus states */
     --brand-dark: #111111;
 }
 
