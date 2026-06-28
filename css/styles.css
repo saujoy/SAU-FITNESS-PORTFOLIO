@@ -12,7 +12,6 @@ body {
     letter-spacing: 2px;
 }
 
-/* Original hero background imagery with dark overlay masks */
 header {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
                 url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470') 
@@ -20,16 +19,14 @@ header {
 }
 
 /* ==========================================================================
-   /* ==========================================================================
    2. CUSTOM BRIGHT PINK CORE SYSTEM (FOR COACH SAU)
    ========================================================================== */
 :root {
     --brand-pink: #ff007f;       /* Ultra-bright, high-saturation pink */
-    --brand-pink-hover: #e60072; /* Slightly darker shade for interactive hover/focus states */
+    --brand-pink-hover: #e60072; /* Slightly darker shade for interactive hover states */
     --brand-dark: #111111;
 }
 
-/* Text & Background Utility Colors */
 .text-pink {
     color: var(--brand-pink) !important;
 }
@@ -41,7 +38,6 @@ header {
 /* ==========================================================================
    3. BRAND NAVIGATION & DYNAMIC COMPONENT ACTIONS
    ========================================================================== */
-/* Smooth active/hover navbar item transitions matching your brand colors */
 .navbar-dark .navbar-nav .nav-link {
     transition: color 0.3s ease;
 }
@@ -51,7 +47,6 @@ header {
     color: var(--brand-pink) !important;
 }
 
-/* Vibrant Primary Pink Action Buttons */
 .btn-pink {
     background-color: var(--brand-pink);
     color: #ffffff !important;
@@ -67,7 +62,6 @@ header {
     box-shadow: 0 4px 15px rgba(255, 42, 117, 0.5);
 }
 
-/* Vibrant Outline Action Buttons */
 .btn-outline-pink {
     border: 2px solid var(--brand-pink);
     color: var(--brand-pink) !important;
@@ -82,13 +76,11 @@ header {
     color: #ffffff !important;
 }
 
-/* Form input styling tweaks */
 .form-control:focus, .form-select:focus {
     border-color: var(--brand-pink);
     box-shadow: 0 0 0 0.25px rgba(255, 42, 117, 0.25);
 }
 
-/* Custom interactive framing rules for the image grids */
 .gallery-img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
