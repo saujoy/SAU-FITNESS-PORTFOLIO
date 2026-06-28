@@ -24,3 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+// Feature 2: Coach Sau Quick BMI Calculator
+function calculateBMI() {
+    const weight = parseFloat(document.getElementById("bmi-weight").value);
+    const height = parseFloat(document.getElementById("bmi-height").value) / 100; // convert cm to meters
+
+    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+        document.getElementById("bmi-result").innerText = "Please enter valid numbers.";
+        return;
+    }
+
+    const bmi = (weight / (height * height)).toFixed(1);
+    let category = "";
+
+    if (bmi < 18.5) category = "Underweight";
+    else if (bmi < 25) category = "Normal weight";
+    else if (bmi < 30) category = "Overweight";
+    else category = "Obese";
+
+    document.getElementById("bmi-result").innerText = `Your BMI is ${bmi} (${category}). Let's smash your goals!`;
+}
