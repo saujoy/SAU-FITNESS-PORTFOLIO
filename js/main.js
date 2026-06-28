@@ -1,36 +1,85 @@
-// Wait for the DOM to fully load
+// ==========================================================================
+// SAU FITNESS CORE INTERACTIVE ACTIONS
+// ==========================================================================
+
 document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.querySelector("form");
+    
+    // --- FEATURE 1: DYNAMIC GYM CONTACT FORM VALIDATION ---
+    const contactForm = document.getElementById('gymContactForm');
     
     if (contactForm) {
-        contactForm.addEventListener("submit", function (event) {
-            const nameInput = document.querySelector('input[type="text"]');
-            const emailInput = document.querySelector('input[type="email"]');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent standard page reloads
             
-            // Basic validation check
-            if (nameInput && nameInput.value.trim() === "") {
-                alert("Please enter your name to get started with Coach Sau!");
-                event.preventDefault(); // Stop form submission
-                return;
+            let isValid = true;
+            const name = document.getElementById('fullName');
+            const email = document.getElementById('emailAddress');
+            const phone = document.getElementById('phoneNumber');
+            const msg = document.getElementById('formMessage');
+            const alertBox = document.getElementById('formAlertBox');
+
+            // Reset UI Bootstrap Error States
+            [name, email, phone, msg].forEach(el => {
+                if (el) el.classList.remove('is-invalid');
+            });
+            if (alertBox) alertBox.innerHTML = '';
+
+            // Full Name Check
+            if (name && !name.value.trim()) {
+                name.classList.add('is-invalid');
+                isValid = false;
             }
-            
-            if (emailInput && emailInput.value.trim() === "") {
-                alert("Please enter a valid email address!");
-                event.preventDefault(); // Stop form submission
-                return;
+
+            // Email Address Syntax Check
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email.value.trim())) {
+                email.classList.add('is-invalid');
+                isValid = false;
             }
-            
-            alert("Success! Your fitness journey with Coach Sau is about to begin.");
+
+            // Phone Number Check
+            if (phone && !phone.value.trim()) {
+                phone.classList.add('is-invalid');
+                isValid = false;
+            }
+
+            // Message Body Check
+            if (msg && !msg.value.trim()) {
+                msg.classList.add('is-invalid');
+                isValid = false;
+            }
+
+            // If form complies successfully, render premium success alert box
+            if (isValid) {
+                if (alertBox) {
+                    const submittedName = name ? name.value.trim() : 'there';
+                    alertBox.innerHTML = `
+                        <div class="alert alert-success bg-pink border-0 text-white text-center shadow-sm" role="alert">
+                            <strong>Success!</strong> Thank you, ${submittedName}. Your message has been sent. We look forward to helping you grow stronger! 💜
+                        </div>
+                    `;
+                }
+                contactForm.reset();
+            }
         });
     }
 });
-// Feature 2: Coach Sau Quick BMI Calculator
+
+// --- FEATURE 2: COACH SAU QUICK BMI CALCULATOR ---
+// (Kept outside the DOM block so your HTML button can access it globally via onclick="calculateBMI()")
 function calculateBMI() {
-    const weight = parseFloat(document.getElementById("bmi-weight").value);
-    const height = parseFloat(document.getElementById("bmi-height").value) / 100; // convert cm to meters
+    const weightInput = document.getElementById("bmi-weight");
+    const heightInput = document.getElementById("bmi-height");
+    const resultOutput = document.getElementById("bmi-result");
+
+    // Safety check to ensure elements exist on the current page before running logic
+    if (!weightInput || !heightInput || !resultOutput) return;
+
+    const weight = parseFloat(weightInput.value);
+    const height = parseFloat(heightInput.value) / 100; // convert cm to meters
 
     if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-        document.getElementById("bmi-result").innerText = "Please enter valid numbers.";
+        resultOutput.innerText = "Please enter valid numbers.";
         return;
     }
 
@@ -42,5 +91,5 @@ function calculateBMI() {
     else if (bmi < 30) category = "Overweight";
     else category = "Obese";
 
-    document.getElementById("bmi-result").innerText = `Your BMI is ${bmi} (${category}). Let's smash your goals!`;
+    resultOutput.innerText = `Your BMI is ${bmi} (${category}). Let's smash your goals!`;
 }
