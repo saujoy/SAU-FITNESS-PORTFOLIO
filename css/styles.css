@@ -18,6 +18,14 @@ header {
                 no-repeat center center/cover;
 }
 
+/* Helper utility for readable long text inside hero headers */
+.max-width-800 {
+    max-width: 800px;
+}
+.max-width-600 {
+    max-width: 600px;
+}
+
 /* ==========================================================================
    2. CUSTOM BRIGHT PINK CORE SYSTEM (FOR COACH SAU)
    ========================================================================== */
@@ -76,11 +84,16 @@ header {
     color: #ffffff !important;
 }
 
-.form-control:focus, .form-select:focus {
-    border-color: var(--brand-pink);
-    box-shadow: 0 0 0 0.25px rgba(255, 42, 117, 0.25);
+/* Custom Accessibility Rules for Focus Rings */
+.form-control:focus, 
+.form-select:focus {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: var(--brand-pink) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 0, 127, 0.25) !important;
 }
 
+/* Gallery & Interactive Animations */
 .gallery-img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -89,4 +102,9 @@ header {
 .gallery-img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(255, 42, 117, 0.3) !important;
+}
+
+/* Clean handling for standard Bootstrap modal frames */
+.modal-content {
+    border-radius: 0.75rem;
 }
