@@ -43,8 +43,8 @@
         <section class="container my-5">
             <div class="row g-5">
                 
-                <div class="col-lg-5">
-                    <div class="bg-black border border-secondary rounded p-4 h-100 shadow">
+                <div class="col-lg-5 d-flex flex-column gap-4">
+                    <div class="bg-black border border-secondary rounded p-4 shadow">
                         <h2 class="h3 fw-bold text-pink mb-4">Contact Details</h2>
                         
                         <div class="mb-4">
@@ -75,82 +75,24 @@
                             <span class="text-secondary d-block ps-3">6:00 AM – 6:00 PM</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-7">
-                    <div class="p-4 border border-secondary rounded h-100 shadow-sm bg-dark">
-                        <h2 class="h3 fw-bold mb-2">Send Us a <span class="text-pink">Message</span></h2>
-                        <p class="text-secondary small mb-4">Have a question or need more information? Fill out our contact form and we'll get back to you as soon as possible.</p>
+                    <div class="bg-black border border-secondary rounded p-4 shadow">
+                        <h2 class="h3 fw-bold text-pink mb-2">BMI Calculator</h2>
+                        <p class="text-secondary small mb-4">Quickly check your Body Mass Index status below.</p>
                         
-                        <div id="formAlertBox" class="mb-3"></div>
-
-                        <form id="gymContactForm" novalidate>
-                            <div class="mb-3">
-                                <label for="fullName" class="form-label small fw-semibold">Full Name</label>
-                                <input type="text" class="form-control bg-black text-white border-secondary" id="fullName" placeholder="Enter your full name">
-                                <div class="invalid-feedback text-pink">Please provide your full name.</div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-6">
+                                <label for="bmi-weight" class="form-label small fw-semibold">Weight (kg)</label>
+                                <input type="number" class="form-control bg-dark text-white border-secondary" id="bmi-weight" placeholder="e.g. 65">
                             </div>
-
-                            <div class="mb-3">
-                                <label for="emailAddress" class="form-label small fw-semibold">Email Address</label>
-                                <input type="email" class="form-control bg-black text-white border-secondary" id="emailAddress" placeholder="name@example.com">
-                                <div class="invalid-feedback text-pink">Please provide a valid email address.</div>
+                            <div class="col-6">
+                                <label for="bmi-height" class="form-label small fw-semibold">Height (cm)</label>
+                                <input type="number" class="form-control bg-dark text-white border-secondary" id="bmi-height" placeholder="e.g. 165">
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="phoneNumber" class="form-label small fw-semibold">Phone Number</label>
-                                <input type="tel" class="form-control bg-black text-white border-secondary" id="phoneNumber" placeholder="e.g. 0729 757 854">
-                                <div class="invalid-feedback text-pink">Please provide a phone number.</div>
-                            </div>
+                        <div class="d-grid mb-3">
+                            <button type="button" onclick="calculateBMI()" class="btn btn-outline-pink fw-bold">Calculate BMI</button>
+                        </div>
 
-                            <div class="mb-4">
-                                <label for="formMessage" class="form-label small fw-semibold">Message</label>
-                                <textarea class="form-control bg-black text-white border-secondary" id="formMessage" rows="4" placeholder="How can we help you?"></textarea>
-                                <div class="invalid-feedback text-pink">Please type your message context.</div>
-                            </div>
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-pink btn-lg fw-bold">Submit Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="bg-black py-5 border-top border-secondary text-center">
-            <div class="container my-3 max-width-800 mx-auto">
-                <h2 class="fw-bold text-uppercase mb-3">Visit <span class="text-pink">Us</span></h2>
-                <p class="text-secondary lead mb-4">
-                    Our women-only fitness center provides a welcoming, supportive, and safe environment for women of all ages and life stages. Whether you're a student, professional, mother, expectant mother, or senior, we're here to help you achieve your fitness and wellness goals.
-                </p>
-                <h3 class="h4 text-pink fw-bold mt-4">Let's Connect</h3>
-                <p class="text-white font-monospace">
-                    We look forward to helping you begin or continue your wellness journey. Reach out today and become part of a community that empowers women to grow stronger, healthier, and more confident every day. 💜✨
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-dark text-secondary text-center py-4 border-top border-secondary">
-        <div class="container">
-            <p class="mb-1 text-white">&copy; 2026 SAU FITNESS. All Rights Reserved.</p>
-            <p class="small">Strength, Mobility & Personal Fitness Coaching</p>
-            <div class="mt-3">
-                <a href="index.html" class="text-pink mx-2 text-decoration-none">Home</a>
-                <a href="about.html" class="text-pink mx-2 text-decoration-none">About</a>
-                <a href="programs.html" class="text-pink mx-2 text-decoration-none">Programs</a>
-                <a href="transformations.html" class="text-pink mx-2 text-decoration-none">Success Stories</a>
-                <a href="gallery.html" class="text-pink mx-2 text-decoration-none">Gallery</a>
-                <a href="faq.html" class="text-pink mx-2 text-decoration-none">FAQs</a>
-                <a href="contact.html" class="text-pink mx-2 text-decoration-none">Book Consultation</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+                        <div id="bmi-result" class
